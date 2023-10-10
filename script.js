@@ -5,9 +5,9 @@ const orderList  = document.querySelector("#todoList");
 
 addBtn.addEventListener("click",(e)=>{
   
-
+  const listItem = document.createElement("li");
   if(input.value){
-    const listItem = document.createElement("li");
+  
 
     listItem.innerText = input.value;
   
