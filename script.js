@@ -1,12 +1,22 @@
+
 const input = document.querySelector("#newTodoInput");
-const addBtn = document.querySelector("#addTodoBtn");
-const list = document.querySelector("#list");
+const addBtn = document.querySelector("#addTodoBtn")
+const orderList  = document.querySelector("#todoList");
 
-addBtn.addEventListener("click", (e) => {
-  if (input.value.trim() !== "") {
-    list.textContent = input.value;
+addBtn.addEventListener("click",(e)=>{
+  
+  const listItem = document.createElement("li");
+  if(input.value){
+  
 
-    // Clear the input field
-    input.value = "";
+    listItem.innerText = input.value;
+  
+    orderList.appendChild(listItem);
+
+	  input.value=" ";
   }
-});
+  
+
+
+  
+})
